@@ -57,17 +57,24 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Mobieve\Api\DefaultApi(
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
+$message = new \Mobieve\Model\Message(); // \Mobieve\Model\Message | 
 
 try {
-    $result = $apiInstance->channelsOptions();
+    $result = $apiInstance->createMessage($message);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->channelsOptions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotificationApi->createMessage: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -79,11 +86,6 @@ All URIs are relative to *https://38m715k2fa.execute-api.sa-east-1.amazonaws.com
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**channelsOptions**](docs/Api/DefaultApi.md#channelsoptions) | **OPTIONS** /channels | 
-*DefaultApi* | [**messagesIdOptions**](docs/Api/DefaultApi.md#messagesidoptions) | **OPTIONS** /messages/{id} | 
-*DefaultApi* | [**messagesOptions**](docs/Api/DefaultApi.md#messagesoptions) | **OPTIONS** /messages | 
-*DefaultApi* | [**templatesIdOptions**](docs/Api/DefaultApi.md#templatesidoptions) | **OPTIONS** /templates/{id} | 
-*DefaultApi* | [**templatesOptions**](docs/Api/DefaultApi.md#templatesoptions) | **OPTIONS** /templates | 
 *NotificationApi* | [**createMessage**](docs/Api/NotificationApi.md#createmessage) | **POST** /messages | 
 *NotificationApi* | [**createTemplate**](docs/Api/NotificationApi.md#createtemplate) | **POST** /templates | 
 *NotificationApi* | [**getChannels**](docs/Api/NotificationApi.md#getchannels) | **GET** /channels | 
@@ -103,7 +105,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## BearerToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 
 ## Author

@@ -23,10 +23,16 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $message = new \Mobieve\Model\Message(); // \Mobieve\Model\Message | 
 
@@ -51,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -70,10 +76,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $template = new \Mobieve\Model\Template(); // \Mobieve\Model\Template | 
 
@@ -98,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -119,10 +131,16 @@ Obter todos os canais de notificação
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -143,7 +161,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -162,10 +180,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = 'id_example'; // string | 
 
@@ -190,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -209,10 +233,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -233,7 +263,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -252,10 +282,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -276,7 +312,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -295,10 +331,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: BearerToken
+$config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 $apiInstance = new Mobieve\Api\NotificationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = 'id_example'; // string | 
 $template = new \Mobieve\Model\Template(); // \Mobieve\Model\Template | 
@@ -325,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../../README.md#BearerToken)
 
 ### HTTP request headers
 
