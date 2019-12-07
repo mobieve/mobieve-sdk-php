@@ -1,6 +1,6 @@
 <?php
 /**
- * NotificationApi
+ * NotifierApi
  * PHP version 5
  *
  * @category Class
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mobieve\Client;
+namespace Mobieve\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -40,14 +40,14 @@ use Mobieve\HeaderSelector;
 use Mobieve\ObjectSerializer;
 
 /**
- * NotificationApi Class Doc Comment
+ * NotifierApi Class Doc Comment
  *
  * @category Class
  * @package  Mobieve
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class NotificationApi
+class NotifierApi
 {
     /**
      * @var ClientInterface

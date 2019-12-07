@@ -14,7 +14,7 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src/Notifier/Client</directory>
+            <directory suffix=".php">./src/Notifier/Api</directory>
             <directory suffix=".php">./src/Notifier/Model</directory>
         </whitelist>
     </filter>

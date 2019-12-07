@@ -1,16 +1,16 @@
-# Mobieve\NotificationApi
+# Mobieve\NotifierApi
 
-All URIs are relative to *https://38m715k2fa.execute-api.sa-east-1.amazonaws.com/ngrok*
+All URIs are relative to *https://38m715k2fa.execute-api.sa-east-1.amazonaws.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createMessage**](NotificationApi.md#createMessage) | **POST** /messages | 
-[**createTemplate**](NotificationApi.md#createTemplate) | **POST** /templates | 
-[**getChannels**](NotificationApi.md#getChannels) | **GET** /channels | 
-[**getMessage**](NotificationApi.md#getMessage) | **GET** /messages/{id} | 
-[**getMessages**](NotificationApi.md#getMessages) | **GET** /messages | 
-[**getTemplates**](NotificationApi.md#getTemplates) | **GET** /templates | 
-[**updateTemplate**](NotificationApi.md#updateTemplate) | **POST** /templates/{id} | 
+[**createMessage**](NotifierApi.md#createMessage) | **POST** /messages | 
+[**createTemplate**](NotifierApi.md#createTemplate) | **POST** /templates | 
+[**getChannels**](NotifierApi.md#getChannels) | **GET** /channels | 
+[**getMessage**](NotifierApi.md#getMessage) | **GET** /messages/{id} | 
+[**getMessages**](NotifierApi.md#getMessages) | **GET** /messages | 
+[**getTemplates**](NotifierApi.md#getTemplates) | **GET** /templates | 
+[**updateTemplate**](NotifierApi.md#updateTemplate) | **POST** /templates/{id} | 
 
 
 # **createMessage**
@@ -28,7 +28,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ try {
     $result = $apiInstance->createMessage($message);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->createMessage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->createMessage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -81,7 +81,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -93,7 +93,7 @@ try {
     $result = $apiInstance->createTemplate($template);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->createTemplate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->createTemplate: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -136,7 +136,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -147,7 +147,7 @@ try {
     $result = $apiInstance->getChannels();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->getChannels: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->getChannels: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -185,7 +185,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -197,7 +197,7 @@ try {
     $result = $apiInstance->getMessage($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->getMessage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->getMessage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -238,7 +238,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,7 +249,7 @@ try {
     $result = $apiInstance->getMessages();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->getMessages: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->getMessages: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -287,7 +287,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -298,7 +298,7 @@ try {
     $result = $apiInstance->getTemplates();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->getTemplates: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->getTemplates: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -336,7 +336,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -349,7 +349,7 @@ try {
     $result = $apiInstance->updateTemplate($id, $template);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->updateTemplate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->updateTemplate: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

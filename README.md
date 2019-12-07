@@ -62,7 +62,7 @@ $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKey('Authoriza
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Mobieve\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Mobieve\Api\NotificationApi(
+$apiInstance = new Mobieve\Api\NotifierApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -74,7 +74,7 @@ try {
     $result = $apiInstance->createMessage($message);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationApi->createMessage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotifierApi->createMessage: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -82,17 +82,17 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://38m715k2fa.execute-api.sa-east-1.amazonaws.com/ngrok*
+All URIs are relative to *https://38m715k2fa.execute-api.sa-east-1.amazonaws.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*NotificationApi* | [**createMessage**](docs/Api/NotificationApi.md#createmessage) | **POST** /messages | 
-*NotificationApi* | [**createTemplate**](docs/Api/NotificationApi.md#createtemplate) | **POST** /templates | 
-*NotificationApi* | [**getChannels**](docs/Api/NotificationApi.md#getchannels) | **GET** /channels | 
-*NotificationApi* | [**getMessage**](docs/Api/NotificationApi.md#getmessage) | **GET** /messages/{id} | 
-*NotificationApi* | [**getMessages**](docs/Api/NotificationApi.md#getmessages) | **GET** /messages | 
-*NotificationApi* | [**getTemplates**](docs/Api/NotificationApi.md#gettemplates) | **GET** /templates | 
-*NotificationApi* | [**updateTemplate**](docs/Api/NotificationApi.md#updatetemplate) | **POST** /templates/{id} | 
+*NotifierApi* | [**createMessage**](docs/Api/NotifierApi.md#createmessage) | **POST** /messages | 
+*NotifierApi* | [**createTemplate**](docs/Api/NotifierApi.md#createtemplate) | **POST** /templates | 
+*NotifierApi* | [**getChannels**](docs/Api/NotifierApi.md#getchannels) | **GET** /channels | 
+*NotifierApi* | [**getMessage**](docs/Api/NotifierApi.md#getmessage) | **GET** /messages/{id} | 
+*NotifierApi* | [**getMessages**](docs/Api/NotifierApi.md#getmessages) | **GET** /messages | 
+*NotifierApi* | [**getTemplates**](docs/Api/NotifierApi.md#gettemplates) | **GET** /templates | 
+*NotifierApi* | [**updateTemplate**](docs/Api/NotifierApi.md#updatetemplate) | **POST** /templates/{id} | 
 
 
 ## Documentation For Models

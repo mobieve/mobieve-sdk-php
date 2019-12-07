@@ -81,7 +81,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://38m715k2fa.execute-api.sa-east-1.amazonaws.com/ngrok';
+    protected $host = 'https://38m715k2fa.execute-api.sa-east-1.amazonaws.com/v1';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
