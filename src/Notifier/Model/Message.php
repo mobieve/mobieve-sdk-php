@@ -61,6 +61,7 @@ class Message implements ModelInterface, ArrayAccess
         'to_address' => 'string',
         'to_name' => 'string',
         'template_id' => 'int',
+        'template_name' => 'string',
         'fields' => 'object',
         'created_at' => 'string',
         'updated_at' => 'string'
@@ -76,6 +77,7 @@ class Message implements ModelInterface, ArrayAccess
         'to_address' => null,
         'to_name' => null,
         'template_id' => null,
+        'template_name' => null,
         'fields' => null,
         'created_at' => null,
         'updated_at' => null
@@ -112,6 +114,7 @@ class Message implements ModelInterface, ArrayAccess
         'to_address' => 'to_address',
         'to_name' => 'to_name',
         'template_id' => 'template_id',
+        'template_name' => 'template_name',
         'fields' => 'fields',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
@@ -127,6 +130,7 @@ class Message implements ModelInterface, ArrayAccess
         'to_address' => 'setToAddress',
         'to_name' => 'setToName',
         'template_id' => 'setTemplateId',
+        'template_name' => 'setTemplateName',
         'fields' => 'setFields',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
@@ -142,6 +146,7 @@ class Message implements ModelInterface, ArrayAccess
         'to_address' => 'getToAddress',
         'to_name' => 'getToName',
         'template_id' => 'getTemplateId',
+        'template_name' => 'getTemplateName',
         'fields' => 'getFields',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
@@ -211,6 +216,7 @@ class Message implements ModelInterface, ArrayAccess
         $this->container['to_address'] = isset($data['to_address']) ? $data['to_address'] : null;
         $this->container['to_name'] = isset($data['to_name']) ? $data['to_name'] : null;
         $this->container['template_id'] = isset($data['template_id']) ? $data['template_id'] : null;
+        $this->container['template_name'] = isset($data['template_name']) ? $data['template_name'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -236,6 +242,9 @@ class Message implements ModelInterface, ArrayAccess
         }
         if ($this->container['template_id'] === null) {
             $invalidProperties[] = "'template_id' can't be null";
+        }
+        if ($this->container['template_name'] === null) {
+            $invalidProperties[] = "'template_name' can't be null";
         }
         if ($this->container['fields'] === null) {
             $invalidProperties[] = "'fields' can't be null";
@@ -353,6 +362,30 @@ class Message implements ModelInterface, ArrayAccess
     public function setTemplateId($template_id)
     {
         $this->container['template_id'] = $template_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets template_name
+     *
+     * @return string
+     */
+    public function getTemplateName()
+    {
+        return $this->container['template_name'];
+    }
+
+    /**
+     * Sets template_name
+     *
+     * @param string $template_name template_name
+     *
+     * @return $this
+     */
+    public function setTemplateName($template_name)
+    {
+        $this->container['template_name'] = $template_name;
 
         return $this;
     }

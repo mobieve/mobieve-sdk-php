@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **to_address** | **string** |  | 
 **to_name** | **string** |  | 
 **template_id** | **int** |  | 
+**template_name** | **string** |  | 
 **fields** | **object** |  | 
 **created_at** | **string** |  | 
 **updated_at** | **string** |  | 
